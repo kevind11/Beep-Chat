@@ -1,0 +1,32 @@
+<!--
+  Generated template for the MessagePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary" #navBar>
+    <ion-title>{{friendProfile?.firstName}} {{friendProfile?.lastName}}</ion-title>
+    <ion-buttons end *ngIf="!isLoading">
+      <ion-chip [color]= "isOnline ?'secondary-ionic' : 'danger'">
+        <ion-label>{{isOnline ? 'Online' : 'Offline'}}</ion-label>
+      </ion-chip>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content #content class="bg-color-content">
+  <div *ngFor="let singleMessage of messages | async; let index = index; trackBy : messageIdentify; let last = last">
+    <div text-center *ngIf="needDateHeader(index,singleMessage.date)">
+      <ion-label class="center-blue">{{singleMessage.date | date}}</ion-label>
+    </div>
+    <app-chat-message [userUid]="profile.uid" [message]="singleMessage"></app-chat-message>
+    {{last ? scrollBottom() :''}}
+  </div>
+</ion-content>
+<ion-footer>
+  <app-send-message-box (resize)="contentResize($event)" (sendMessage)="sendMessage($event)"></app-send-message-box>
+</ion-footer>

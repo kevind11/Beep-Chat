@@ -1,0 +1,16 @@
+app-login-form{
+    ion-input{
+        background-color: #DEDEDE;
+        padding-left: 8px;
+    }
+    .item-inner {
+        border-bottom-color: transparent !important;
+        box-shadow: none !important;
+     }
+     .login-form-buttons{
+         padding: 10px;
+         .margin-right{
+            margin-right: 8px;
+         }
+     } 
+}

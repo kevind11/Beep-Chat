@@ -1,0 +1,25 @@
+<div class="image-container" text-center>
+  <img src="assets/imgs/profile-placeholder.png" alt="profile" class="image">
+</div>
+
+<ion-card *ngIf="userProfile">
+  <ion-card-content>
+    <ion-item>
+      <ion-label stacked>Email Address</ion-label>
+      <ion-input [value]="userProfile.email" readonly="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>First Name</ion-label>
+      <ion-input [value]="userProfile.firstName" readonly="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Last Name</ion-label>
+      <ion-input [value]="userProfile.lastName" readonly="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>Date of Birth</ion-label>
+      <ion-input [value]="userProfile.dateOfBirth" readonly="true"></ion-input>
+    </ion-item>
+  </ion-card-content>
+
+</ion-card>

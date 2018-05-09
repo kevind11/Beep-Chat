@@ -1,0 +1,21 @@
+app-chat-message {
+    ion-item {
+        background-color: #DEDEDE !important;
+    }
+    .bubble-chat{
+        padding: 8px;
+        border-radius: 8px;
+        color: black;
+        max-width: 80%;
+        background-color: white;
+    } 
+    .me{
+        background-color: #54D3BF;
+    }
+    .clear{
+        clear: both;
+    }
+    
+    
+
+}

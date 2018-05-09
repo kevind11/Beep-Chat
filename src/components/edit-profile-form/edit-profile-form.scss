@@ -1,0 +1,17 @@
+app-edit-profile-form{
+    ion-input{
+        background-color: #DEDEDE;
+        padding-left: 8px;
+    }
+    ion-datetime{
+        background-color: #DEDEDE;
+        padding-left: 8px !important;
+    }
+    .item-inner {
+        border-bottom-color: transparent !important;
+        box-shadow: none !important;
+     }
+     .edit-profile-form-buttons{
+         padding: 10px;
+     }
+}

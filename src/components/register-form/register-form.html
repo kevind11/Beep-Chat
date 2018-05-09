@@ -1,0 +1,23 @@
+<ion-card>
+  <form [formGroup]="registerForm">
+  <ion-card-content>
+    <ion-item>
+      <ion-label stacked>Email Address</ion-label>
+      <ion-input type="email" formControlName="email"></ion-input>
+    </ion-item>
+    <div padding-horizontal *ngIf="registerForm.get('email').invalid && registerForm.get('email').dirty">
+        <span class="global__input-error">Email address is not valid</span>
+      </div>
+    <ion-item>
+      <ion-label stacked>Password</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <div padding-horizontal *ngIf="registerForm.get('password').invalid && registerForm.get('password').dirty">
+        <span class="global__input-error">Password must have 6-20 characters and contain one number</span>
+      </div>
+  </ion-card-content>
+  <ion-row float-right class="register-form-buttons">
+    <button ion-button small color="primary" (click)="register()" [disabled]="registerForm.invalid">Register</button>
+  </ion-row>
+</form>
+</ion-card>

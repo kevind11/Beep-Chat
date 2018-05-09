@@ -1,0 +1,8 @@
+<button ion-item (click)="openChat()" no-lines detail-none>
+  <ion-avatar item-left>
+    <img [src]="message.user.avatar ? message.user.avatar : 'assets/imgs/avatar.png'" alt="Avatar">
+  </ion-avatar>
+  <h2>{{message.user.firstName}} {{message.user.lastName}}</h2>
+  <p>{{message.message}}</p>
+  <p text-right>{{message.date | date}}</p>
+</button>

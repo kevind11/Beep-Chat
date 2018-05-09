@@ -1,0 +1,16 @@
+<ion-item no-lines *ngIf="message.user.uid != userUid; else me">
+  <ion-avatar item-start>
+    <img [src]="message.user.avatar ? message.user.avatar : 'assets/imgs/avatar.png'" alt="Avatar">
+  </ion-avatar>
+  <h3>
+    <strong>{{message.user.firstName}} {{message.user.lastName}}</strong>
+  </h3>
+  <p float-left text-wrap class="bubble-chat ">{{message.message}}</p>
+  <p class="clear">{{message.date | date:'HH.mm'}}</p>
+</ion-item>
+<ng-template #me>
+  <ion-item no-lines>
+    <p text-wrap class="bubble-chat me" float-right>{{message.message}}</p>
+    <p text-right class="clear">{{message.date | date:'HH.mm'}}<p>
+  </ion-item>
+</ng-template>

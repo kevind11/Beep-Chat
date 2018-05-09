@@ -1,0 +1,10 @@
+<ion-row align-items-center class="bg-color">
+  <ion-col no-padding>
+    <ion-textarea [(ngModel)]="message" (resize)="contentResize($event)" autoresize rows="1" placeholder="Enter Message..."></ion-textarea>
+  </ion-col>
+  <ion-col col-auto no-padding align-self-center>
+    <button ion-button clear icon-only no-margin (click)="send()" [disabled]="message?.trim().length <= 0" class="button-padding">
+      <ion-icon name="send"></ion-icon>
+    </button>
+  </ion-col>
+</ion-row>

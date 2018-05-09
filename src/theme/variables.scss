@@ -34,11 +34,12 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
+  primary:    #54976B,
+  secondary:  #9D9D9D,
+  secondary-ionic : #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
 );
 
 
@@ -59,7 +60,22 @@ $colors: (
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
+$text-input-wp-border-color:transparent;
 
+
+$text-input-wp-border-width:0px;
+
+
+$text-input-wp-margin-top:0px;
+
+
+$text-input-wp-margin-end:0px;	
+
+
+$text-input-wp-margin-bottom:0px;
+
+
+$text-input-wp-margin-start :0px;
 
 
 
